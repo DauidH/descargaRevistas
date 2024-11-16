@@ -1,0 +1,15 @@
+Páginas soportadas:
+
+online.fliphtml5.com    Hash
+online.anyflip.com      Hash
+www.flipsnack.com       Page
+semana.com              Hash, pasar páginas manual
+camacol.co		Page
+calameo.com
+heyzine.com
+issuu.com
+
+Páginas no soportadas:
+
+eltabloide.com.co
+

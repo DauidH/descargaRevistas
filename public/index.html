@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Descarga Revistas</title>
+</head>
+<body>
+    <h1>Descarga</h1>
+    <div class="keyboard">
+        <span class="key">R</span>
+        <span class="key">E</span>
+        <span class="key">V</span>
+        <span class="key">I</span>
+        <span class="key">S</span>
+        <span class="key">T</span>
+        <span class="key">A</span>
+        <span class="key">S</span>
+    </div>
+    <button id="activarRecomendaciones"><img src="./img/interrogante.png" alt="interrogante"></button>
+    <div id="actualizaciones">
+        <h1 class="actualizacion">NUEVA ACTUALIZACIÓN</h1>
+        <p class="actualizacion">Permite los redireccionamientos en tu navegador para permitir la descarga del PDF!</p>
+    </div>
+    <div id="advertencia" class="advertencia oculto">
+        <h2>Recomendaciones:</h2>
+        <P>Copiar los links con el HTTP y ubicarlos en la página 1.</P>
+        <p>Ruta de Respaldo: <p target="_blank" style="color: blue;">\\192.168.1.153\Area-Tecnologia\DESCARGAREVISTASJS</p></p>
+        <p>⬇️VERIFICAR ORDEN PÁGINAS⬇️</p>
+        <a href="https://www.ilovepdf.com/es/organizar-pdf" target="_blank" style="color: blue;">https://www.ilovepdf.com/es/organizar-pdf</a>
+        <p>Páginas soportadas:</p>
+        <p>flipsnack, camacol, calameo, issuu, Tabloide, Yumpu, Google Drive.</p>
+        <div class="paginas">
+            <p>fliphtml5, anyflip, heyzine, ladevi = ORDENAR </p>
+        </div>
+        <div class="paginas">
+            <p>semana(Extraer el Link del iFrame), eldiario(Extraer el Link del iFrame) y ORDENAR.</p>
+        </div>
+        <p style="font-size: smaller;">Anyflip tiene una página de publicidad que no la toma, buscarla, screenshot y meterla manualmente.</P>
+    </div>
+    <div class="contenido">
+        <div class="descarga">
+            <input type="text" id="link-descarga" placeholder="Ingresa el enlace aquí...">
+            <button id="btn-descarga">Descargar</button>
+        </div>
+        <div id="resultado">&nbsp;</div>
+    </div>
+
+    <div class="terminal">
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #4A4947;
+    position: relative;
+}
+
+.contenido {
+    z-index: 2;
+    position: fixed;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    color: #ffb900;
+    position: absolute;
+    top: 9%;
+}
+
+input {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 15px;
+}
+
+#actualizaciones {
+  position: fixed;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  width: 301px;
+  height: 220px;
+  text-align: center;
+  background-image: url(/img/nubeComic.png);
+  background-size: 300px 220px;
+  background-position: center;
+  background-repeat: no-repeat; 
+  transform: translate(-173%, -50vh);
+  animation: aparecerDesaparecer 20s infinite; /* Nombre de la animación, duración, y que se repita infinitamente */
+  opacity: 0; /* Inicialmente el elemento es invisible */
+  transition: opacity 1s ease-in-out; /* Para una transición suave */
+}
+
+.actualizacion {
+  position: absolute;  /* Esto permite mover el div dentro del contenedor */
+  padding: 10px;
+  border-radius: 8px;
+  color: black;
+  font-size: 16px;
+}
+
+#actualizaciones h1 {
+  position: absolute;
+  top: -5%;
+  left: -8%;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+#actualizaciones p {
+  width: 239px;
+  top: 30%;
+  left: 5%;
+  font-size: 12px;
+}
+
+.advertencia {
+  z-index: 20;
+  border: 1px solid #000;
+  width: 280px;
+  height: 405px;
+  padding: 10px;
+  border-radius: 22px;
+  background-color: #FAF7F0;
+  color: #000;
+  font-size: smaller;
+  font-weight: lighter;
+  position: fixed;
+  top: 24%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.advertencia.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.advertencia .paginas p {
+    font-size: 12px;
+}
+
+#activarRecomendaciones {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  position: fixed;
+  top: 5%;
+  right: 0vh;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#activarRecomendaciones img {
+  width: 55px;
+  height: 55px;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#activarRecomendaciones img:hover {
+  transform: scale(1.05);
+}
+
+#activarRecomendaciones img:active {
+  transform: scale(0.95);
+}
+
+.advertencia a {
+    font-size: 13px;
+    margin-bottom: -11px;
+    background-color: #FAF7F0;
+    color: #000;
+}
+
+.terminal {
+    z-index: 1;
+    font-family: system-ui;
+    font-weight: normal;
+    color: #FAF7F0;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    height: 45%;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: black;
+    position: fixed;
+    top: 69%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: #FAF7F0;
+    width: 302px;
+    height: 59px;
+    top: 175%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease; 
+}
+
+#link-descarga {
+    background: #FAF7F0;
+}
+
+/*--------------------------------------Animación-Actualizaciones-----------------------------------------*/
+
+@keyframes aparecerDesaparecer {
+  0% {
+    opacity: 0; 
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*---------------------------------------------Responsive-------------------------------------------------*/
+@media (max-width: 1315px) {
+  .advertencia {
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+
+  #activarRecomendaciones {
+    display: block
+  }
+}
+
+@media (max-width: 1034px) {
+  #actualizaciones {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .key {
+    font-size: 100px
+  }
+}
+
+@media (max-height: 930px) {
+  .contenido {
+    top: 38%;
+  }
+
+  .advertencia {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+
+  #activarRecomendaciones {
+    display: block;
+    top: 60px;
+    right: 0vh;
+  }
+}
+
+/*----------------------------------------ANIMACIÓN TÍTULOS-------------------------------------------*/
+
+.keyboard {
+    position: absolute;
+    top: 12%;
+}
+
+body {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+  }
+  
+  
+  .key {
+    font-size: 115px;
+    display: inline-block;
+    letter-spacing: -1vw;
+    transition: transform 0.2s;
+  }
+  
+  
+  
+  @keyframes pressDown1 {
+    30%,
+    40%,
+    100% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown2 {
+    70%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    75% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown3 {
+    30%,
+    40%,
+    100% {
+      transform: translateY(0);
+    }
+    35% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown4 {
+    40%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    45% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown5 {
+    20%,
+    30%,
+    100% {
+      transform: translateY(0);
+    }
+    25% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown6 {
+    60%,
+    70%,
+    100% {
+      transform: translateY(0);
+    }
+    65% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown7 {
+    10%,
+    20%,
+    100% {
+      transform: translateY(0);
+    }
+    15% {
+      transform: translateY(10px);
+    }
+  }
+  
+  @keyframes pressDown8 {
+    35%,
+    45%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(10px);
+    }
+  }
+  
+  
+  
+  .key:nth-child(1) {
+    animation: pressDown1 2s infinite;
+  }
+  
+  .key:nth-child(2) {
+    animation: pressDown2 3s infinite;
+  }
+  
+  .key:nth-child(3) {
+    animation: pressDown3 4s infinite;
+  }
+  
+  .key:nth-child(4) {
+    animation: pressDown4 2.5s infinite;
+  }
+  
+  .key:nth-child(5) {
+    animation: pressDown5 2.5s infinite;
+  }
+  
+  .key:nth-child(6) {
+    animation: pressDown6 3.5s infinite;
+  }
+  
+  .key:nth-child(7) {
+    animation: pressDown7 2.2s infinite;
+  }
+  
+  .key:nth-child(8) {
+    animation: pressDown8 3.2s infinite;
+  }
+  
+  
+  
+  
+  /* extra stuff */
+  .jux-linx {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+    padding: 5px 10px;
+    transition: 0.1s all ease-in;
+  }
+  
+  a:nth-child(1):hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 2px 0 #349eff;
+  }
+  
+  a:nth-child(2):hover {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 2px 0 #ff5757;
+  }
