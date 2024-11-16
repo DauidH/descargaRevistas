@@ -5,7 +5,7 @@ import { descargarCalameo } from './revistas/calameo.js';
 import { descargarTabloide } from './revistas/tabloide.js';
 
 let _archivo = '';
-let _generalPath = '\\\\192.168.1.153\\Area-Tecnologia\\DESCARGAREVISTASJS';
+let _generalPath = './archivos_descargados';
 
 export function getGeneralPath() {
     return _generalPath;
